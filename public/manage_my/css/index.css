@@ -65,6 +65,9 @@ html,body{
     padding-left: 180px;
     height:100%;
 }
+.main.fullscreen{
+    padding-left: 0px;
+  }
 .main .main-head{
    height: 50px;
    background-color: #3c8dbc;
@@ -86,13 +89,7 @@ html,body{
     background-color: #f5f5f5;
 }
 
-.main .mian-body .content #content-left{
-  
-    background-color: red;
-}
-.main .mian-body .content #content-right{
 
-}
 
 
 

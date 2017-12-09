@@ -23,13 +23,13 @@
         <div class="list">
             <ul>
                 <li>
-                    <a href="#" class="center block">
+                    <a href="javascript:;" class="center block">
                         <i class="glyphicon glyphicon-user"></i>
                         用户管理
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="center block">
+                    <a href="javascript:;" class="center block">
                         <i class="glyphicon glyphicon-th-list"></i>
                         分类管理
                     </a>
@@ -44,7 +44,7 @@
 
                 </li>
                 <li>
-                    <a href="#" class="center block">
+                    <a href="javascript:;" class="center block">
                         <i class="glyphicon glyphicon-tags"></i>
                         商品管理
                     </a>
@@ -56,7 +56,7 @@
         <div class="main-head">
             <a href="#" class="clearfix">
                 <i class="main-hl glyphicon glyphicon-align-justify pull-left"></i>
-                <i class="mian-hr  glyphicon glyphicon-log-out pull-right"></i>
+                <i class="mian-hr  glyphicon glyphicon-log-out pull-right" id="mian-hr"></i>
             </a>
         </div>
         <div class="main-body container-fluid">
@@ -67,27 +67,31 @@
                 </li>
                 <li class="active">首页</li>
             </ol>
+            <!-- 圖表 -->
             <div class="content clearfix">
                  <div id="content-left" class="pull-left" style="width: 500px;height:400px;"></div>
                  <div id="content-right" class="pull-right" style="width: 500px;height:400px;"></div>
             </div>
         </div>
     </div>
-    <div class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+    <!-- 模态框 -->
+    <div class="modal fade modal-sure" tabindex="-1" role="dialog">
+        <div class="modal-dialog  modal-sm" role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header">                                   
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title">Modal title</h4>
+                    <h4 class="modal-title">温馨提示</h4>
                 </div>
                 <div class="modal-body">
-                    <p>One fine body&hellip;</p>
+                       <p class='text-danger'>
+                        <span class='glyphicon glyphicon-info-sign
+                        '></span> 你想清楚了?真的要走??</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -99,6 +103,7 @@
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/echarts/echarts.min.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

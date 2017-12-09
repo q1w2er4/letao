@@ -81,13 +81,4 @@ $(function () {
     // 使用刚指定的配置项和数据显示图表。
     myChart2.setOption(option2);
 
-
-
-
-
-
-    $('.main-head .main-hl').click(function () {
-        $('.aside').toggle();
-        $('.main').toggleClass("fullscreen");
-    })
 })
