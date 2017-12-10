@@ -6,11 +6,11 @@ $(function(){
         type:'get',
         success:function(data){
             console.log(data);
-            if(data.)
+            
         }
     })
 
-
+    
 
 
 

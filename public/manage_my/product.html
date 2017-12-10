@@ -63,27 +63,33 @@
 
             <ol class="breadcrumb">
                 <li>
-                    <a href="#">管理系统</a>
+                    <a href="#">商品管理</a>
                 </li>
-                <li class="active">分类管理</li>
-                <li>一级分类</li>
             </ol>
             <!-- 也是圖表 -->
-            <button class="btn btn-default mar-bo" data-toggle="modal" data-target=".modal-first-add">添加分类</button>
-            <table class="table table-bordered">
+            <button class="btn btn-default mar-bo" data-toggle="modal" data-target=".modal-add">添加商品</button>
+
+            <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th>序号</th>
-                        <th>分类名称</th>
+                        <th width="5%">序号</th>
+                        <th width="25%">商品名称</th>
+                        <th width="25%">商品描述</th>
+                        <th width="10%">商品库存</th>
+                        <th width="10%">商品尺寸</th>
+                        <th width="10%">商品状态</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                 </tbody>
-            </table>
-            <ul id="paginator"></ul>
+            </table>]
+            <!-- 分页功能 -->
+            <ul id='product-pagintor'> </ul>
         </div>
     </div>
+
     <!-- 登出模态框 -->
     <div class="modal fade modal-sure" tabindex="-1" role="dialog">
         <div class="modal-dialog  modal-sm" role="document">
@@ -109,7 +115,7 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- 添加分类模态框 -->
-    <div class="modal fade modal-first-add" tabindex="-1" role="dialog">
+    <div class="modal fade modal-add" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -135,11 +141,19 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-    <script id="firstTmp" type="text/html">
+    <script id="productTmp" type="text/html">
         {{each rows}}
         <tr>
             <td>{{(page-1)*size+1+$index}}</td>
-            <td>{{$value.categoryName}}</td>
+            <td>{{$value.proName}}</td>
+            <td>{{$value.proDesc}}</td>
+            <td>{{$value.num}}</td>
+            <td>{{$value.size}}</td>
+            <td>{{$value.statu}}</td>
+            <td>
+                <button class="btn btn-danger">下架</button>
+                <button class="btn btn-primary">编辑</button>
+            </td>
         </tr>
         {{/each}}
     </script>
@@ -150,7 +164,7 @@
     <script src="./lib/echarts/echarts.min.js"></script>
     <script src="./lib/artTemplate/template.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/first.js"></script>
+    <script src="./js/product.js"></script>
 </body>
 
 </html>
