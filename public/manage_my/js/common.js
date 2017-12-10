@@ -1,4 +1,23 @@
 $(function(){
+    // 判断是否登陆
+    // [判断用户是否登陆]
+    $.ajax({
+        url:'/employee/checkRootLogin',
+        type:'get',
+        success:function(data){
+            console.log(data);
+            if(data.)
+        }
+    })
+
+
+
+
+
+
+
+
+
     //1. 展开收起侧边栏
     $('.main-head .main-hl').click(function () {
         $('.aside').toggle();
@@ -8,7 +27,7 @@ $(function(){
     $('#mian-hr').click(function(){
         $('.modal-sure').modal('show');
     })
-    $('.modal-footer').on('click','button:nth-of-type(2)',function(){
+    $('.modal-sure  .modal-footer').on('click','button:nth-of-type(2)',function(){
         $('.modal-sure').modal('hide');
         console.log('我是common');
         window.location.href="./login.html";

@@ -48,7 +48,7 @@ $(function () {
                 console.log('hahahahah');
                 console.log(data);
                 // 关闭模态框
-                $('.modal-add').modal('hide')
+                $('.modal-first-add').modal('hide')
                 getData();
             }
         })
