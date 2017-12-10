@@ -107,3 +107,7 @@ html,body{
 .main-body ol{
   background-color: #f5f5f5;
 }
+/* 增加工具类 */
+.mar-bo{
+  margin-bottom: 30px;
+}

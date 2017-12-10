@@ -34,10 +34,10 @@
                         分类管理
                     </a>
                     <div class="child" style="display:none">
-                        <a href="#" class="center block">
+                        <a href="first.html" class="center block">
                             一级分类
                         </a>
-                        <a href="#" class="center block">
+                        <a href="second.html" class="center block">
                             二级分类
                         </a>
                     </div>
@@ -68,7 +68,7 @@
                 <li class="active">用户管理</li>
             </ol>
             <!-- 表格 -->
-            <table class="table table-bordered">
+            <table class="table table-bordered text-center">
                 <thead>
                     <tr>
                         <th>序号</th>
@@ -83,35 +83,7 @@
                 </tbody>
             </table>
             <!-- 分页插件 -->
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <ul id='pagintor'></ul>
         </div>
     </div>
     <!-- 模态框 -->
@@ -142,7 +114,7 @@
     <script id="userTable" type="text/html">
         {{each rows}}
         <tr>
-            <td>{{(page-1)*pageSize+1}}</td>
+            <td>{{(page-1)*size+1+$index}}</td>
             <td>{{$value.username}}</td>
             <td>{{$value.mobile}}</td>
             <td>
@@ -160,6 +132,7 @@
         {{/each}}
     </script>
     <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/echarts/echarts.min.js"></script>
     <script src="./lib/artTemplate/template.js"></script>

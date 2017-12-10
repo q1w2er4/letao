@@ -10,6 +10,7 @@ $(function(){
     })
     $('.modal-footer').on('click','button:nth-of-type(2)',function(){
         $('.modal-sure').modal('hide');
+        console.log('我是common');
         window.location.href="./login.html";
     })
     // 侧边栏收起

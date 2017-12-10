@@ -1,5 +1,5 @@
 $(function () {
-    $('form').bootstrapValidator({
+    $('.loginForm').bootstrapValidator({
 
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -55,7 +55,7 @@ $(function () {
             url: '/employee/employeeLogin',
             type: 'post',
             datatype: 'json',
-            data: $('form').serialize(),
+            data: $('.loginForm').serialize(),
             success: function (backdata) {
 
                 if (backdata.success == true) {
@@ -63,9 +63,9 @@ $(function () {
                 } else {
                     $form.data('bootstrapValidator').disableSubmitButtons(false);
                     if (data.error == 1000) {
-                        $('form').data('bootstrapValidator').updateStatus('username', 'INVALID', 'callback');
+                        $('.loginForm').data('bootstrapValidator').updateStatus('username', 'INVALID', 'callback');
                     } else if (data.error == 1001) {
-                        $('form').data('bootstrapValidator').updateStatus('password', 'INVALID', 'callback');
+                        $('.loginForm').data('bootstrapValidator').updateStatus('password', 'INVALID', 'callback');
                     }
                 }
             }
