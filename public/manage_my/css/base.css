@@ -111,3 +111,10 @@ html,body{
 .mar-bo{
   margin-bottom: 30px;
 }
+
+#fileUpLoad{
+  position: absolute;
+  left:30px;
+  top:110px;
+  opacity: 0;
+}

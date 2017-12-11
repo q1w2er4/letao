@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/jquery-fileupload/fileinput.min.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/second.css">
+    <!-- <link rel="stylesheet" href="./css/second.css"> -->
     <title>Document</title>
 </head>
 
@@ -77,9 +78,9 @@
                     </tr>
                 </thead>
                 <tbody>
-
                 </tbody>
             </table>
+            <ul id="paginator"></ul>
         </div>
     </div>
     <!-- 登出模态框 -->
@@ -117,15 +118,41 @@
                     <h4 class="modal-title">增加分类</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="firstform">
+                    <form id="secondform">
                         <div class="form-group">
-                            <input type="text" name="categoryName" class="form-control" placeholder="请输入二级类名">
+                            <!-- <label for="exampleInputEmail1">Email address</label> -->
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-default">一级分类</button>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Dropdown link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入二级类名">
+                        </div>
+                        <div class="form-group">
+                            <input class='btn btn-default' type="file" id="fileUpLoad" name="pic1" data-url="/category/addSecondCategoryPic">
+                            <a class='btn btn-default ' href="javascript:void(0)">
+                                    <span class='glyphicon glyphicon-picture'></span>上传图片</a>
+                        </div>
+                        <div class="form-group">
+                            <img src="./image/none.png" style="width:100px;height:100px;" alt="">
+                            <input type="text" name="brandLogo" >
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="submit" form="firstform" class="btn btn-primary">确定</button>
+                    <button type="submit" form="secondform" class="btn btn-primary">确定</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -133,21 +160,26 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-    <script id="firstTmp" type="text/html">
+    <script id="secondTmp" type="text/html">
         {{each rows}}
         <tr>
             <td>{{(page-1)*size+1+$index}}</td>
             <td>{{$value.categoryName}}</td>
-            <td>{{}}</td>
-            <td>{{}}</td>
+            <td>{{$value.brandName}}</td>
+            <td>
+                <img style="width:100px" src="{{$value.brandLogo}}" alt="">
+            </td>
         </tr>
         {{/each}}
     </script>
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/echarts/echarts.min.js"></script>
     <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/second.js"></script>
 </body>
