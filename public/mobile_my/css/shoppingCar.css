@@ -1,0 +1,67 @@
+.lt_content{
+    width:100%;
+}
+.lt_content ul{
+    width:100%;
+}
+.lt_content ul li{
+    background-color: white;
+    width:100%;
+    height:120px;
+    display: flex;
+    padding: 11px 15px;
+    box-sizing: border-box;
+}
+.lt_content ul li .left{
+    flex: 1;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.lt_content ul li .left img{
+    width:42px;
+    height:42px;
+   
+}
+.lt_content ul li .left input{
+    display: block;
+}
+.lt_content ul li .right{
+    flex: 3;
+}
+.lt_content ul li .right .headline{
+    font-size: 14px;
+}
+.lt_content ul li .right .price{
+    font-size: 13px;
+    color: gray;
+    padding: 8px 0px;
+}
+.lt_content ul li .right .price .nowPrice{
+    color: red;
+
+}
+.lt_content ul li .right .price .oldPrice{
+    color: gray;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+.lt_content ul li .right .price .nums{
+    color:gray;
+    font-size: 14px;
+    float: right;
+}
+
+.lt_content ul li .right .shoeCode{
+    font-size: 13px;
+    color: gray;
+}
+/* <!-- 订单总金额 --> */
+.orderSum {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 2px gray;
+    align-items: center;
+    padding-left: 10px;
+}
+
+

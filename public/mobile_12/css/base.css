@@ -48,12 +48,13 @@ ul,ol{
     flex:110;
     /* background-color: orange; */
     position: relative;
+    overflow: hidden;
 }
 
 /* 底部 */
 .lt_footer{
     height: 55px;
-    background-color: #006699;
+    background-color: deepskyblue;
 }
 .lt_footer ul{
     display: flex;
@@ -68,6 +69,7 @@ ul,ol{
 .lt_footer ul li a{
     color:white;
 }
+.lt_footer ul li a span{}
 .lt_footer ul li a p{
     color:white;
 }

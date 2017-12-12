@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
     <title>Document</title>
     <!-- 导入 字体图标的css -->
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
@@ -13,48 +12,69 @@
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <!-- 导入css -->
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/shoppingCar.css">
 </head>
 
 <body>
     <div class="lt_container">
         <div class="lt_header">
             <a href="javascript:void(0)">
-                <span class="fa fa-home"></span>
+                <span class="fa fa-chevron-left"></span>
             </a>
-            <h4>乐淘云购</h4>
+            <h4>购物车</h4>
             <a href="javascript:void(0)">
                 <span class="fa fa-search"></span>
             </a>
         </div>
         <div class="lt_content">
-            <!-- 滚动 -->
-            
+            <ul class="mui-table-view shop-car-list">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <div class="left  mui-pull-left">
+                            <img class="mui-media-object" src="./images/product.jpg">
+                            <input  style='display:block' type="checkbox">
+                        </div>
 
+                        <div class="mui-media-body">
+                            <p>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+                            <div class="price-container mui-clearfix">
+                                <span class="price mui-pull-left">¥499.1</span>
+                                <span class="old-price mui-pull-left">¥500</span>
+                                <span class="num mui-pull-right">一双</span>
+                            </div>
+                            <p>鞋码:&nbsp;50</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="lt_order_list">
+            <p>订单总金额:<span>RMB:00.0</span></p>
+            <button class="mui-btn mui-btn-danger">生成订单</button>
         </div>
         <div class="lt_footer">
             <!-- ul>li*4>a[href="javascript:void(0)"]>span.fa.fa-home+p{首页} -->
             <ul>
-                <li class='active'>
+                <li>
                     <a href="javascript:void(0)">
                         <span class="fa fa-home"></span>
                         <p>首页</p>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">
+                    <a href="./category.html">
                         <span class="fa fa-list"></span>
                         <p>分类</p>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:void(0)">
+                <li class='active'>
+                    <a href="./shoppingCar.html">
                         <span class="fa fa-cart-plus"></span>
                         <p>购物车</p>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">
+                    <a href="./userCenter.html">
                         <span class="fa fa-user-plus"></span>
                         <p>会员中心</p>
                     </a>
@@ -66,6 +86,5 @@
 
 </html>
 <!-- 导入mui -->
-<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script><script src="./lib/mui/js/mui.min.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/index.js"></script>

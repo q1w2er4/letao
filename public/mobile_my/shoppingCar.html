@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
     <title>Document</title>
     <!-- 导入 字体图标的css -->
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <!-- 导入mui的css -->
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
-    <!-- 导入css -->
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/shoppingCar.css">
 </head>
 
 <body>
     <div class="lt_container">
+        <!-- 头部 -->
         <div class="lt_header">
             <a href="javascript:void(0)">
                 <span class="fa fa-home"></span>
@@ -27,11 +26,38 @@
                 <span class="fa fa-search"></span>
             </a>
         </div>
+        <!-- 中间部分 -->
         <div class="lt_content">
-            <!-- 滚动 -->
-            
+            <ul>
+                <li>
+                    <div class="left">
+                        <img src="./images/product.jpg" alt="">
+                        <input type="checkbox">
+                    </div>
+                    <div class="right">
+                        <p class="headline">
+                             匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮
+                        </p>
+                        <p class="price">
+                            <span class="nowPrice">$499</span>
+                            <span class="oldPrice">899.00</span>
+                            <span class="nums">一双</span>
+                        </p>
+                        <p class="shoeCode">鞋码:&nbsp;&nbsp;50</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <!-- 订单总金额 -->
+        <div class="orderSum">
+            <p class="ordermoney">订单总金额:$489.00</p>
+            <button class="mui-btn mui-btn-danger">
+                生成订单
+            </button>
 
         </div>
+        <!-- 底部 -->
         <div class="lt_footer">
             <!-- ul>li*4>a[href="javascript:void(0)"]>span.fa.fa-home+p{首页} -->
             <ul>
@@ -62,10 +88,9 @@
             </ul>
         </div>
     </div>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 自己写的js -->
+    <script src="./js/common.js"></script>
+    <script src="./js/category.js"></script>
 </body>
-
 </html>
-<!-- 导入mui -->
-<script src="./lib/mui/js/mui.min.js"></script>
-<script src="./js/common.js"></script>
-<script src="./js/index.js"></script>

@@ -29,7 +29,7 @@ $(function () {
     }
 
     getData();
-    // 2.上传文件
+    // 2.图片的上传和预览
     $("#fileUpLoad").fileupload({
         dataType: "json",
         //e：事件对象
