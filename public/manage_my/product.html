@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/first.css">
+    <link rel="stylesheet" href="./css/product.css">
     <title>Document</title>
 </head>
 
@@ -44,7 +44,7 @@
 
                 </li>
                 <li>
-                    <a href="javascript:;" class="center block">
+                    <a href="./product.html" class="center block">
                         <i class="glyphicon glyphicon-tags"></i>
                         商品管理
                     </a>
@@ -63,8 +63,9 @@
 
             <ol class="breadcrumb">
                 <li>
-                    <a href="#">商品管理</a>
+                    <a href="#">管理系统</a>
                 </li>
+                <li>商品管理</li>
             </ol>
             <!-- 也是圖表 -->
             <button class="btn btn-default mar-bo" data-toggle="modal" data-target=".modal-add">添加商品</button>
@@ -82,9 +83,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                 </tbody>
-            </table>]
+            </table>
             <!-- 分页功能 -->
             <ul id='product-pagintor'> </ul>
         </div>
@@ -125,15 +126,36 @@
                     <h4 class="modal-title">添加分类</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="firstform">
+                    <form id="form">
                         <div class="form-group">
-                            <input type="text" name="categoryName" class="form-control" placeholder="请输入一级类名">
+                            <input name="proName" type="text" class="form-control" placeholder="请输入商品名称">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="proDesc" class="form-control" rows="3" placeholder="请输入商品描述"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input name="num" type="text" class="form-control" placeholder="请输入商品库存">
+                        </div>
+                        <div class="form-group">
+                            <input name="price" type="text" class="form-control" placeholder="请输入商品价格">
+                        </div>
+                        <div class="form-group">
+                            <input name="oldPrice" type="text" class="form-control" placeholder="请输入商品名原价">
+                        </div>
+                        <div class="form-group">
+                            <input name="size" type="text" class="form-control" placeholder="请输入商品尺码">
+                        </div>
+                        <div class="form-group">
+                            <input id="fileUpload" type="file" class="form-control" name="pic1" data-url="/product/addProductPic">
+                            <a class="btn btn-default" href="javascript:void(0)">上传图片</a>
+                            <span>提示:必须上传三个图片</span>
+                            <br>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer first-modal">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="submit" form="firstform" class="btn btn-primary">确定</button>
+                    <button type="submit" form="form" class="btn btn-primary">确定</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -163,6 +185,8 @@
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/echarts/echarts.min.js"></script>
     <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/product.js"></script>
 </body>

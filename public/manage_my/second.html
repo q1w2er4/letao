@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="./lib/jquery-fileupload/fileinput.min.css">
+    <!-- <link rel="stylesheet" href="./lib/jquery-fileupload/fileinput.min.css"> -->
     <link rel="stylesheet" href="./css/base.css">
     <!-- <link rel="stylesheet" href="./css/second.css"> -->
     <title>Document</title>
@@ -42,7 +42,7 @@
 
                 </li>
                 <li>
-                    <a href="javascript:;" class="center block">
+                    <a href="./product.html" class="center block">
                         <i class="glyphicon glyphicon-tags"></i>
                         商品管理
                     </a>
@@ -109,7 +109,7 @@
     </div>
     <!-- 添加分类模态框 -->
     <div class="modal fade modal-add" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -118,41 +118,43 @@
                     <h4 class="modal-title">增加分类</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="secondform">
+                    <form id="form">
                         <div class="form-group">
-                            <!-- <label for="exampleInputEmail1">Email address</label> -->
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default">一级分类</button>
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Dropdown
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#">Dropdown link</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="dropdown ">
+                                <span>一级分类</span>
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="true">
+                                    <span class='select-value'>请选择</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#">Action</a>
+                                    </li>
+                                </ul>
+                                <!-- 用来存储分类id,一定要有name属性 -->
+                                <input type="text" hidden name="categoryId">
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入二级类名">
+                            <input type="text" name="brandName" class="form-control" id="exampleInputPassword1" placeholder="请输入二级类名">
+
                         </div>
                         <div class="form-group">
                             <input class='btn btn-default' type="file" id="fileUpLoad" name="pic1" data-url="/category/addSecondCategoryPic">
+
                             <a class='btn btn-default ' href="javascript:void(0)">
-                                    <span class='glyphicon glyphicon-picture'></span>上传图片</a>
+                                <span class='glyphicon glyphicon-picture'></span>上传图片</a>
                         </div>
                         <div class="form-group">
                             <img src="./image/none.png" style="width:100px;height:100px;" alt="">
-                            <input type="text" name="brandLogo" >
+                            <input type="text" name="brandLogo" hidden>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="submit" form="secondform" class="btn btn-primary">确定</button>
+                    <button type="submit" form="form" class="btn btn-primary">确定</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -167,7 +169,7 @@
             <td>{{$value.categoryName}}</td>
             <td>{{$value.brandName}}</td>
             <td>
-                <img style="width:100px" src="{{$value.brandLogo}}" alt="">
+                <img style="width:100px;height:70px;" src="{{$value.brandLogo}}" alt="">
             </td>
         </tr>
         {{/each}}
