@@ -1,0 +1,67 @@
+.lt_content{
+    display: flex;
+}
+.content-left{
+    width:90px;
+}
+.content-left .mui-scroll-wrapper{
+    width:90px;
+
+}
+.content-left .mui-scroll-wrapper ul{
+    width: 100%;
+   
+}
+.content-left .mui-scroll-wrapper ul li{
+    width: 100%;
+
+}
+.content-left .mui-scroll-wrapper ul li a{
+    display: block;
+   height: 50px;
+   line-height: 50px;
+   color: gray;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid ;
+    border-right: 1px solid;
+    text-align: center;
+    background-color: rgb(124, 191, 223);
+}
+.content-right{
+
+    flex:1;
+    
+}
+.content-right .mui-scroll-wrapper{
+   
+   flex:1;
+}
+.content-right .mui-scroll-wrapper ul{
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+.content-right .mui-scroll-wrapper ul li{
+    width:33.333%;
+   
+}
+.content-right .mui-scroll-wrapper ul li a{
+    display: block;
+    width:100%;
+    text-decoration: none;
+    padding: 0px 5px;
+    box-sizing: border-box;
+}
+.content-right .mui-scroll-wrapper ul li a img{
+    display: block;
+    width: 62px;
+    height: 62px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.content-right .mui-scroll-wrapper ul li a p{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+}

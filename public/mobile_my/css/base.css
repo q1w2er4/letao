@@ -48,6 +48,7 @@ ul,ol{
     flex:110;
     /* background-color: orange; */
     position: relative;
+    overflow: hidden;
 }
 
 /* 底部 */

@@ -12,51 +12,65 @@
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <!-- 导入css -->
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/search.css">
 </head>
 
 <body>
     <div class="lt_container">
-        <!-- 头部 -->
         <div class="lt_header">
             <a href="javascript:void(0)">
-                <span class="fa fa-chevron-left"></span>
+                <span class="fa fa-home"></span>
             </a>
-            <h4>乐淘分类</h4>
+            <h4>搜索中心</h4>
             <a href="javascript:void(0)">
                 <span class="fa fa-search"></span>
             </a>
         </div>
         <div class="lt_content">
-            <!-- (.content_left>ul>li*20>a[href='javascript:void(0)']{运动馆$})+(.content_right>ul>li*20>a[href='javascript:void(0)']>img[src='./images/brand6.png']+p{阿迪王}) -->
-            <div class="content_left ">
-                <div class="mui-scroll-wrapper">
-                    <ul class="mui-scroll">
-
-                    </ul>
-                </div>
+            <!-- 结构 -->
+            <!-- form>input[type="search"]+button -->
+            <form class="search-form" action="./searchList.html">
+                <input name="key"  placeholder="请输入搜索关键字" type="search">
+                <button>搜索</button>
+            </form>
+            <!-- 搜索历史 -->
+            <!-- .searh-history>span{搜索历史}+span{清空记录}>i -->
+            <div class="searh-history">
+                <span>搜索历史</span>
+                <span>
+                    <i class="fa fa-trash-o"></i>
+                    清空记录
+                </span>
             </div>
-            <div class="content_right">
-                <div class="mui-scroll-wrapper">
-
-                    <ul class="mui-scroll">
-                        
-                    </ul>
-                </div>
-
+            <!-- 搜索历史记录 -->
+            <!-- .history-list>ul>li>a[href='javascript:void(0)']{123}+span.fa.fa-close -->
+            <div class="history-list">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">123</a>
+                        <span class="fa fa-close"></span>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">123</a>
+                        <span class="fa fa-close"></span>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">123</a>
+                        <span class="fa fa-close"></span>
+                    </li>
+                </ul>
             </div>
         </div>
-        <!-- 底部 -->
         <div class="lt_footer">
             <!-- ul>li*4>a[href="javascript:void(0)"]>span.fa.fa-home+p{首页} -->
             <ul>
-                <li>
+                <li class='active'>
                     <a href="javascript:void(0)">
                         <span class="fa fa-home"></span>
                         <p>首页</p>
                     </a>
                 </li>
-                <li class='active'>
+                <li>
                     <a href="./category.html">
                         <span class="fa fa-list"></span>
                         <p>分类</p>
@@ -76,30 +90,24 @@
                 </li>
             </ul>
         </div>
-
+    </div>
 </body>
 
 </html>
-<script id="categoryTmp" type="text/html">
-    {{each rows}}
-    <li class='active'>
-        <a href="javascript:void(0)" data-id="{{$value.id}}">{{$value.categoryName}}</a>
-    </li>
-    {{/each}}
-</script>
-<script id="categoryRightTmp" type="text/html">
-    {{each rows}}
-    <li>
-        <a href="javascript:void(0)">
-            <img src="{{$value.brandLogo}}" alt="">
-            <p>{{$value.brandName}}</p>
-        </a>
-    </li>
-    {{/each}}
-</script>
-<script src="./lib/artTemplate/template.js"></script>
 <!-- 导入mui -->
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
+<!-- 导入模板引擎 -->
+<script src="./lib/artTemplate/template.js"></script>
+<!-- 定义模板 -->
+<script id='searchList' type="text/html">
+    {{each}}
+        <li>
+            <a href="javascript:void(0)">{{$value}}</a>
+            <span class="fa fa-close"></span>
+        </li>
+    {{/each}}
+</script>
 <script src="./js/common.js"></script>
-<script src="./js/category.js"></script>
+<!-- 自己的js -->
+<script src="./js/search.js"></script>
